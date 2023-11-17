@@ -27,20 +27,39 @@
     <h1>This is my website</h1> -->
 
     <script>
-
-        let size = 8;
-        let board = "";
-        for (let i = 0; i < size; i++) {
-            for (let j = 0; j < size; j++) {
-                if ((i + j) % 2 == 0) {
-                    board += " ";
-                } else {
-                    board += "#";
-                }
-            }
-            board += "\n";
+        // functions
+        const square = function(x) {
+            return x * x;
         }
-        console.log(board);
+        console.log(square(4));
+
+        // let size = 8;
+        // let board = "";
+        // for (let i = 0; i < size; i++) {
+        //     for (let j = 0; j < size; j++) {
+        //         if ((i + j) % 2 == 0) {
+        //             board += " ";
+        //         } else {
+        //             board += "#"
+        //         }
+        //     }
+        //     board += "\n";
+        // }
+        // console.log(board);
+
+        // let size = 8;
+        // let board = "";
+        // for (let i = 0; i < size; i++) {
+        //     for (let j = 0; j < size; j++) {
+        //         if ((i + j) % 2 == 0) {
+        //             board += " ";
+        //         } else {
+        //             board += "#";
+        //         }
+        //     }
+        //     board += "\n";
+        // }
+        // console.log(board);
 
         // let number 
         // for (let i = 1; i <= 100; i++) {
