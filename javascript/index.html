@@ -27,11 +27,96 @@
     <h1>This is my website</h1> -->
 
     <script>
+
+
         // functions
         const square = function(x) {
             return x * x;
         }
         console.log(square(4));
+
+        const makeNoise = function() {
+            console.log("Pling!");
+        }
+        makeNoise();
+
+        // const power = function(base, exponext) {
+        //     let result = 1;
+        //     for (let count = 0; count < exponext; count ++) {
+        //         result *= base;
+        //     }
+        //     return result;
+        // }
+        // console.log(power(2, 0));
+
+        let x = 10;
+        if (true) {
+            let y = 20;
+            var z = 30;
+            console.log(x + y + z);
+        }
+        // y isn't visible here but z is visible here because of the use of 'var'
+        console.log(x + z);
+
+        const hummus = function(factor) {
+            const ingredient = function(amount, unit, name) {
+                let ingredientAmount = amount * factor;
+                if (ingredientAmount > 1) {
+                    unit += "s";
+                }
+                console.log(`${ingredientAmount} ${unit} ${name}`);
+            };
+            ingredient(1, "can", "chickpeas");
+            ingredient(0.25, "cup", "tahini");
+            ingredient(0.25, "cup", "lemon juice");
+            ingredient(1, "clove", "garlic");
+            ingredient(2, "tablespoon", "olive oil");
+            ingredient(0.5, "teaspoon", "cumin");
+        }
+
+        hummus(10);
+
+        // declaration notation, a second way of declaring function.
+        console.log("The future says: " + future());
+        function future() {
+            return "you will never have flying cars.";
+        }
+
+        // Ạrrow functions
+        const power = (base, exponent) => {
+            let result = 1;
+            for (let i = 0; i < exponent; i++) {
+                result *= base;
+            }
+            return result;
+        };
+        console.log(power(2, 10));
+
+        function greet(who) {
+            console.log("Hello " + who);
+        }
+        greet("Samuel");
+        console.log("bye");
+
+        function chicken() {
+            return egg();
+        }
+
+        function egg() {
+            return chicken();
+        }
+
+        console.log(chicken() + " came first.");
+
+
+
+
+
+
+
+
+
+
 
         // let size = 8;
         // let board = "";
