@@ -27,7 +27,16 @@
     <h1>This is my website</h1> -->
 
     <script>
+        // Optional Arguments
+        function square(x) { return x * x; }
+        console.log(square(4, true, "hedgehog"));
 
+        function minus (a, b) {
+            if (b === undefined) return -a;
+            else return a - b;
+        }
+        console.log(minus(10));
+        console.log(minus(10, 5));
 
         // functions
         // const square = function(x) {
@@ -108,16 +117,7 @@
 
         // console.log(chicken() + " came first.");
 
-
-
-
-
-
-
-
-
-
-
+        
         // let size = 8;
         // let board = "";
         // for (let i = 0; i < size; i++) {
