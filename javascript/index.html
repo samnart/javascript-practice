@@ -27,22 +27,25 @@
     <h1>This is my website</h1> -->
 
     <script>
+        function min(a, b) {
+            return Math.min(a, b);
+        }
+        console.log(min(1244, 14242));
 
         // Growing Functions
-
-        function zeroPad(number, width) {
-            let string = String(number);
-            while(string.length < width) {
-                string = "0" + string;
-            }
-            return string;
-        }
-        function printFarmInventories(cows, chickens, pigs) {
-            console.log(`${zeroPad(cows, 3)} Cows.`);
-            console.log(`${zeroPad(chickens, 3)} Chickens.`);
-            console.log(`${zeroPad(pigs, 3)} Pigs.`)
-        }
-        printFarmInventories(7, 16, 3);
+        // function zeroPad(number, width) {
+        //     let string = String(number);
+        //     while(string.length < width) {
+        //         string = "0" + string;
+        //     }
+        //     return string;
+        // }
+        // function printFarmInventories(cows, chickens, pigs) {
+        //     console.log(`${zeroPad(cows, 3)} Cows.`);
+        //     console.log(`${zeroPad(chickens, 3)} Chickens.`);
+        //     console.log(`${zeroPad(pigs, 3)} Pigs.`)
+        // }
+        // printFarmInventories(7, 16, 3);
 
         // function printFarmInventories(cows, chickens) {
         //     cowString = String(cows);
