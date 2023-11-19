@@ -27,10 +27,23 @@
     <h1>This is my website</h1> -->
 
     <script>
-        function min(a, b) {
-            return Math.min(a, b);
+        function isEven(number) {
+            if (number == 0)
+                return true;
+            else if (number == 1)
+                return false;
+            else if (number < 0)
+                return isEven(-number);
+            else 
+                return isEven(number - 2);
         }
-        console.log(min(1244, 14242));
+        console.log(isEven(-2));
+
+
+        // function min(a, b) {
+        //     return Math.min(a, b);
+        // }
+        // console.log(min(1244, 14242));
 
         // Growing Functions
         // function zeroPad(number, width) {
