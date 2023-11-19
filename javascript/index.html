@@ -29,19 +29,34 @@
     <script>
 
         // Growing Functions
-        function printFarmInventories(cows, chickens) {
-            cowString = String(cows);
-            while(cowString.length < 3) {
-                cowString = "0" + cowString;
+
+        function zeroPad(number, width) {
+            let string = String(number);
+            while(string.length < width) {
+                string = "0" + string;
             }
-            console.log(`${cowString} cows`);
-            chickenString = String(chickens);
-            while(chickenString.length < 3) {
-                chickenString = "0" + chickenString;
-            }
-            console.log(`${chickenString} chickens`);
+            return string;
         }
-        printFarmInventories(7, 11);
+        function printFarmInventories(cows, chickens, pigs) {
+            console.log(`${zeroPad(cows, 3)} Cows.`);
+            console.log(`${zeroPad(chickens, 3)} Chickens.`);
+            console.log(`${zeroPad(pigs, 3)} Pigs.`)
+        }
+        printFarmInventories(7, 16, 3);
+
+        // function printFarmInventories(cows, chickens) {
+        //     cowString = String(cows);
+        //     while(cowString.length < 3) {
+        //         cowString = "0" + cowString;
+        //     }
+        //     console.log(`${cowString} cows`);
+        //     chickenString = String(chickens);
+        //     while(chickenString.length < 3) {
+        //         chickenString = "0" + chickenString;
+        //     }
+        //     console.log(`${chickenString} chickens`);
+        // }
+        // printFarmInventories(7, 11);
 
 
         // // Recursion
