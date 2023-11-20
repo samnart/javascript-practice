@@ -28,20 +28,35 @@
 
     <script>
 
-        function countBs(string) {
-            var count = 0;
-            for (var i = 0; i < string.length; i++) {
-                if (string[i] == 'B' || string[i] == 'b') {
-                    count++;
-                }
-            }
-            console.log(count);
-        }
+        // function countBs(string) {
+        //     var count = 0;
+        //     for (var i = 0; i < string.length; i++) {
+        //         if (string[i] == 'B' || string[i] == 'b') {
+        //             count++;
+        //         }
+        //     }
+        //     console.log(count);
+        // }
 
-        countBs('BasfbafB');
+        // countBs('BasfbafB');
         
 
-        function countChar() {}
+        function countChar(string, ch) {
+            var counted = 0;
+            for (var j = 0; j < string.length; j++) {
+                if (string.charAt(j) == ch) {
+                    counted++;
+                }
+            }
+            return counted;
+        }
+
+        function countBs(string) {
+            return countChar(string, "B");
+        }
+
+        console.log(countBs("BBCDBSD"));
+        console.log(countChar("afafjalafkljajfafsdjajfld", "a"));
 
         // function isEven(number) {
         //     if (number == 0)
