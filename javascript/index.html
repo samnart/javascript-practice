@@ -27,6 +27,63 @@
     <h1>This is my website</h1> -->
 
     <script>
+
+        // The Lycanthrope's Log
+
+        function tableFor (event, journal) {
+            let table = [0, 0, 0, 0];
+            for (let i = 0; i < journal.length; i++) {
+                let entry = journal[i], index = 0;
+                if (entry.events.includes(event)) index += 1;
+                if (entry.squirrel) index += 2;
+                table[index] += 1;
+            }
+            return table;
+        }
+        console.log(tableFor("Pizza", ));
+
+        // let journal = [];
+
+        // function addEntry(events, squirrel) {
+        //     journal.push({events, squirrel});
+        // }
+
+        // addEntry(["work", "touched tree", "pizza", "running", "television"], false);
+        // addEntry(["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"], false);
+        // addEntry(["weekend", "cycling", "break", "peanuts", "beer"], true);
+
+        // function phi(table) {
+        //     return (table[3] * table[[0] - table[2] * table[1]]) / Math.sqrt((table[2] + table[3]) * (table[0] + table[1]) * (table[1] + table[3]) * (table[0] + table[2])); 
+        // }
+        // console.log(phi([76, 9, 4, 1]));
+
+        // function phi(table) {
+        // return (table[3] * table[0] - table[2] * table[1]) /
+        // Math.sqrt((table[2] + table[3]) *
+        // (table[0] + table[1]) *
+        // (table[1] + table[3]) *
+        // (table[0] + table[2]));
+        // }
+        // console.log(phi([76, 9, 4, 1]));
+
+        // Mutability
+        // let object1 = {value: 10};
+        // let object2 = object1;
+        // let object3 = {value: 10};
+        // console.log(object1 == object2);
+        // console.log(object1 == object3);
+        // // object1.value = 15;
+        // console.log(object2.value);
+        // console.log(object3.value);
+
+        // const score = {visitors: 0, home: 0};
+        // score.visitors = 1;
+        // console.log(score.visitors);
+        // // score = {visitors: 1, home: 1}; // this isn't allowed.
+        // console.log(score.visitors);
+
+
+
         // Methods
         // let doh = "Doh";
         // console.log(doh.toUpperCase())
@@ -70,15 +127,15 @@
         // Object.assign(objectA, {b: 3, c: 4}); //copies all properties from one object to another
         // console.log(objectA); 
 
-        let journal = [
-            {events: ["work", "touched tree", "pizza", "running", "television"],
-            squirrel: false},
-            {events: ["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"],
-            squirrel: false},
-            {events: ["weekend", "cycling", "break", "peanuts", "beer"],
-            squirrel: true}
-        ];
-        console.log(journal[1]);
+        // let journal = [
+        //     {events: ["work", "touched tree", "pizza", "running", "television"],
+        //     squirrel: false},
+        //     {events: ["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"],
+        //     squirrel: false},
+        //     {events: ["weekend", "cycling", "break", "peanuts", "beer"],
+        //     squirrel: true}
+        // ];
+        // console.log(journal[1]);
 
         // ARRAYS
         // let arrayName = [1, 2, 3, 4, 5, 6, 7];
