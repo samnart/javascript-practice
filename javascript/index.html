@@ -27,17 +27,33 @@
     <h1>This is my website</h1> -->
 
     <script>
-        function isEven(number) {
-            if (number == 0)
-                return true;
-            else if (number == 1)
-                return false;
-            else if (number < 0)
-                return isEven(-number);
-            else 
-                return isEven(number - 2);
+
+        function countBs(string) {
+            var count = 0;
+            for (var i = 0; i < string.length; i++) {
+                if (string[i] == 'B' || string[i] == 'b') {
+                    count++;
+                }
+            }
+            console.log(count);
         }
-        console.log(isEven(-2));
+
+        countBs('BasfbafB');
+        
+
+        function countChar() {}
+
+        // function isEven(number) {
+        //     if (number == 0)
+        //         return true;
+        //     else if (number == 1)
+        //         return false;
+        //     else if (number < 0)
+        //         return isEven(-number);
+        //     else 
+        //         return isEven(number - 2);
+        // }
+        // console.log(isEven(-2));
 
 
         // function min(a, b) {
