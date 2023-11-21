@@ -28,7 +28,27 @@
 
     <script>
         // Strings and Their Properties
-        
+        let kim = "Kim";
+        kim.age = 88;
+        console.log(kim.age);
+
+        console.log("coconuts".slice(4, 7)); //slice
+        console.log("Coconut".indexOf("u")) //indexOf
+        console.log("one two three".indexOf("ee")); //indexOf two characters
+        console.log("      okay \n   ".trim()); //trims excess white space
+        console.log(String(600).padStart(3, "0")); // puts extra figures before a string incase 
+
+        let sentence = "Secretarybirds specialize in stomping";
+        let words = sentence.split(" ");
+        console.log(words);
+        console.log(words.join(". "))
+
+        console.log("Temi ".repeat(20000)); // repeats a string 
+        let string = "abc";
+        console.log(string.length);
+        console.log(string[1]);
+
+
 
         // Array Loops
         // let todoList = [];
