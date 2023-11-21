@@ -27,20 +27,29 @@
     <h1>This is my website</h1> -->
 
     <script>
+        // Array Loops
+        for (let i = 0; i < JOURNAL.length; i++) {
+            let entry = JOURNAL[I];
+            // Do something with the entry
+        }
+
+        for (let entry of JOURNAL) {
+            console.log(`${entry.events.length} events.`);
+        }
 
         // The Lycanthrope's Log
 
-        function tableFor (event, journal) {
-            let table = [0, 0, 0, 0];
-            for (let i = 0; i < journal.length; i++) {
-                let entry = journal[i], index = 0;
-                if (entry.events.includes(event)) index += 1;
-                if (entry.squirrel) index += 2;
-                table[index] += 1;
-            }
-            return table;
-        }
-        console.log(tableFor("Pizza", ));
+        // function tableFor (event, journal) {
+        //     let table = [0, 0, 0, 0];
+        //     for (let i = 0; i < journal.length; i++) {
+        //         let entry = journal[i], index = 0;
+        //         if (entry.events.includes(event)) index += 1;
+        //         if (entry.squirrel) index += 2;
+        //         table[index] += 1;
+        //     }
+        //     return table;
+        // }
+        // console.log(tableFor("Pizza", ));
 
         // let journal = [];
 
