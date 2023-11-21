@@ -27,26 +27,43 @@
     <h1>This is my website</h1> -->
 
     <script>
+        // Rest Parameters
+        function max(...numbers) {
+            let result = -Infinity;
+            for (let number of numbers) {
+                if (number > result) {
+                    result = number;
+                }
+            }
+            return result;
+        }
+        // console.log(max(4, 1, 9, -2));
+        // let numbers = [1, 324, 2342, 2523, 23423];
+        // console.log(max(234, ...numbers, 124123));
+
+        // let words = ["never", "fully"];
+        // console.log(["will", ...words, "understand"].join(" "));
+
         // Strings and Their Properties
-        let kim = "Kim";
-        kim.age = 88;
-        console.log(kim.age);
+        // let kim = "Kim";
+        // kim.age = 88;
+        // console.log(kim.age);
 
-        console.log("coconuts".slice(4, 7)); //slice
-        console.log("Coconut".indexOf("u")) //indexOf
-        console.log("one two three".indexOf("ee")); //indexOf two characters
-        console.log("      okay \n   ".trim()); //trims excess white space
-        console.log(String(600).padStart(3, "0")); // puts extra figures before a string incase 
+        // console.log("coconuts".slice(4, 7)); //slice
+        // console.log("Coconut".indexOf("u")) //indexOf
+        // console.log("one two three".indexOf("ee")); //indexOf two characters
+        // console.log("      okay \n   ".trim()); //trims excess white space
+        // console.log(String(600).padStart(3, "0")); // puts extra figures before a string incase 
 
-        let sentence = "Secretarybirds specialize in stomping";
-        let words = sentence.split(" ");
-        console.log(words);
-        console.log(words.join(". "))
+        // let sentence = "Secretarybirds specialize in stomping";
+        // let words = sentence.split(" ");
+        // console.log(words);
+        // console.log(words.join(". "))
 
-        console.log("Temi ".repeat(20000)); // repeats a string 
-        let string = "abc";
-        console.log(string.length);
-        console.log(string[1]);
+        // console.log("Temi ".repeat(20000)); // repeats a string 
+        // let string = "abc";
+        // console.log(string.length);
+        // console.log(string[1]);
 
 
 
