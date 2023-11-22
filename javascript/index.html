@@ -27,7 +27,58 @@
     <h1>This is my website</h1> -->
 
     <script>
+        // Higher-Order Functions
+        // let total = 0, count = 1;
+        // while (count <= 10) {
+        //     total += count;
+        //     count += 1;
+        // }
+        // console.log(total);
+
+        // function sum(a, b) {
+            // while (b <=)
+        // }
+
+        // Abstraction
+
+        // Abstraction Repetition
+        // for (let i = 0; i < 10; i++){
+        //     console.log(i);
+        // }
+        
+        // function repeatLog(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         console.log(i);
+        //     }
+        // }
+
+        function repeat(n, action) {
+            for (let i = 0; i < n; i++) {
+                action(i);
+            }
+        }
+        // repeat(3, console.log);
+        
+        let labels = [];
+        repeat(5, i => {
+            labels.push(`Unit ${i + 1}`);
+        });
+        console.log(labels);
+        
+        
+        
+        
+        
+        
+        
+        
         // Exercises
+
+        // Reversing An Array
+        // let wontumi = [1, 2, 3, 4, 5];
+
+        // function reverseArrayInPlace() {}
+
         // The Sum of a Range
         // console.log(sum(range(1, 10)));
 
