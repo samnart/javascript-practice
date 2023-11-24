@@ -28,6 +28,29 @@
 
     <script>
         // Chapter 6: The secret life of objects
+
+        // Prototypes
+        // let empty = {};
+        // console.log(empty.toString); // function
+        // console.log(empty.toString()); // objects
+
+        // console.log(Object.getPrototypeOf({}) == Object.prototype); // true
+        // console.log(Object.getPrototypeOf(Object.prototype)); // null
+
+        // console.log(Object.getPrototypeOf(Math.max) == Function.prototype); // true
+        // console.log(Object.getPrototypeOf([]) == Array.prototype); // true
+
+        // let protoRabbit = {
+        //     speak(line) {
+        //         console.log(`The ${this.type} rabbit says '${line}'`);
+        //     }
+        // };
+        // let killerRabbit = Object.create(protoRabbit);
+        // killerRabbit.type = "killer";
+        // killerRabbit.speak("SKREEEE!");
+       
+
+
         // Encapsulation
         // Methods
         // let rabbit = {};
@@ -51,12 +74,6 @@
         //     console.log(this.coords.map(n => n / this.length));
         // }
         // normalize.call({coords: [0, 2, 3], length: 5});
-
-
-
-
-
-
 
 
 
