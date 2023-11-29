@@ -55,23 +55,41 @@
         // console.log(dateTime.test("01-30-2003 15:20")); // true
         // console.log(dateTime.test("30-jan-2003 15:20"));  // false
 
-        let notBinary = /[^01]/;
-        console.log(notBinary.test("1100100010100110"));
-        console.log(notBinary.test("1100100010200110"));
+        // let notBinary = /[^01]/;
+        // console.log(notBinary.test("1100100010100110"));
+        // console.log(notBinary.test("1100100010200110"));
 
-        //  REPEATING PARTS OF A PATTERN    
-        console.log(/'\d+'/.test("'123'"));
-        console.log(/'\d+'/.test("''"));
-        console.log(/'\d*'/.test("'123'"));
-        console.log(/'\d*'/.test("''"));
+        // //  REPEATING PARTS OF A PATTERN    
+        // console.log(/'\d+'/.test("'123'"));
+        // console.log(/'\d+'/.test("''"));
+        // console.log(/'\d*'/.test("'123'"));
+        // console.log(/'\d*'/.test("''"));
 
-        let neighbor = /neighbou?r/;
-        console.log(neighbor.test("neighbour"));
-        console.log(neighbor.test("neighbor"));
+        // let neighbor = /neighbou?r/;
+        // console.log(neighbor.test("neighbour"));
+        // console.log(neighbor.test("neighbor"));
 
-        let dateTime = /\d{1,2}-\d{1,2}-\d{4} \d{1,2}:\d{2}/;
-        console.log(dateTime.test("1-1-1990 1:01"));
+        // let dateTime = /\d{1,2}-\d{1,2}-\d{4} \d{1,2}:\d{2}/;
+        // console.log(dateTime.test("1-1-1990 1:01"));
 
+        // // GROUPING SUBEXPRESSIONS
+        // let cartoonCrying = /boo+(hoo+)+/i;
+        // console.log(cartoonCrying.test("Boohoooohoohooo"));
+
+        // // MATCHES AND GROUPS
+        // let match = /\d+/.exec("one two 100");
+        // console.log(match);
+        // console.log(match.index);
+
+        // console.log("one two 100".match(/\d+/));
+
+        // let quotedText = /'([^']*)'/;
+        // console.log(quotedText.exec("she said 'hello'"));
+
+        // console.log(/bad(ly)?/.exec("bad"));
+        // console.log(/(\d)+/.exec("123"));
+
+        
 
 
 
