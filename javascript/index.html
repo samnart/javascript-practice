@@ -31,17 +31,17 @@
         // CHAPTER 9: REGULAR EXPRESSIONS
         // Creating a Regular Expression
         // regular expression is a type of object
-        let re1 = new RegExp("abc");
-        let re2 = /abc/;
-        let eighteenPlus = /eighteen\+/;
+        // let re1 = new RegExp("abc");
+        // let re2 = /abc/;
+        // let eighteenPlus = /eighteen\+/;
 
-        // TESTING FOR MATCHES
-        console.log(/abc/.test("abcde"));
-        console.log(/abc/.test("abxde"));
+        // // TESTING FOR MATCHES
+        // console.log(/abc/.test("abcde"));
+        // console.log(/abc/.test("abxde"));
 
-        // SETS OF CHARACTERS
-        console.log(/[0123456789]/.test("in 1992"));
-        console.log(/[0-9]/.test("in 1992"));
+        // // SETS OF CHARACTERS
+        // console.log(/[0123456789]/.test("in 1992"));
+        // console.log(/[0-9]/.test("in 1992"));
 
         // \d any digit character
         // \w an alphanumeric character ("word character")
@@ -90,6 +90,23 @@
         // console.log(/(\d)+/.exec("123"));
 
         
+        
+        // THE DATE CLASS
+        // console.log(new Date());
+        // console.log(new Date(2009, 11, 9, 12, 59, 59, 999));
+        // console.log(new Date(2013, 11, 19).getTime());
+        // console.log(new Date(1387407600000))
+
+        // // Date object from a string
+        // function getDate(string) {
+        //     let [_, month, day, year] = /(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+        //     return new Date(year, month - 1, day);
+        // }
+        // console.log(getDate("1-30-2003"));
+
+        
+
+
 
 
 
