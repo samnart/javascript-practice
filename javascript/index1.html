@@ -3,13 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My home Page</title>
 </head>
 <body>
-    <h1>Testig alert</h1>
+    <!-- <h1>My home page</h1>
+    <p>Hello, I am Samuel and this is my home page.</p>
+    <p>I also did not write a book! So nothing to read here.</p>
+    <button onclick="alert('Boom!');">Do Not Press</button> -->
 
-    <button onclick="alert('Boom!');">Do Not Press</button>
+    <!-- <p>One</p>
+    <p>Two</p>
+    <p>Three</p> -->
 
-    <script src="code/hello.js" type="module">alert("hello!");</script>
+
+    <!-- <p>The best <img src="./img/1.jpg" alt="Swordsman"> in <img src="img/1.jpg" alt="One Piece"></p>
+
+    <p><button onclick="replaceImages()">Replace</button></p> -->
+
+
+    <!-- <blockquote id="quote">
+        No book can ever be finished. While working on it we learn just enough to find it immature the moment we turn away from it.
+    </blockquote> -->
+
+    <!-- <p data-classified="secret"> The launch code is 00000000.</p> -->
+    <!-- <p data-classified="unclassified">I have two feet.</p> -->
+
+    <p style="border: 3px solid red;">
+        I'm boxed in
+    </p>
+
+    <script >
+
+        let para = document.body.getElementsByTagName
+
+
+        // let paras = document.body.getElementsByTagName("p");
+        // for (let para of Array.from(paras)) {
+        //     if (para.getAttribute("data-classified") == "secret") {
+        //         para.remove();
+        //     }
+        // }
+
+
+        // function elt(type, ...childred) {
+        //     let node = document.createElement(type);
+        //     for (let child of childred) {
+        //         if (typeof child != "string") node.appendChild(child);
+        //         else node.appendChild(document.createTextNode(child));
+        //     }
+        //     return node;
+        // }
+
+        // document.getElementById("quote").appendChild(
+        //     elt("footer", "--",
+        //     elt("strong", "Karl Popper"), ", preface to the second edition of ",
+        //     elt("em", "The Open Society and Its Enemies"), ", 1950"));
+
+
+
+
+
+
+
+
+
+        // function replaceImages() {
+        //     let images = document.body.getElementsByTagName("img");
+        //     for (let i = images.length - 1; i >= 0; i--) {
+        //         let image = images[i];
+        //         if (image.alt) {
+        //             let text = document.createTextNode(image.alt);
+        //             image.parentNode.replaceChild(text, image);
+        //         }
+        //     }
+        // }
+
+        // let arrayish = {0: "one", 1: "two", length: 2};
+        // let array = Array.from(arrayish);
+        // console.log(array.map(s => s.toUpperCase()));
+
+
+
+
+
+    // alert("hello!");
+
+    // function talksAbout(node, string) {
+    //         if (node.nodeType == Node.ELEMENT_NODE) {
+    //             for (let child of node.childNodes) {
+    //                 if (talksAbout(child, string)) {
+    //                     return true;
+    //                 }
+    //             }
+    //             return false;
+    //         } else if (node.nodeType == Node.TEXT_NODE) {
+    //             return node.nodeValue.indexOf(string) > -1;
+    //         }
+    //     }
+
+    //     console.log(talksAbout(document.body, "book"));
+
+    // let paragrapgs = document.body.getElementsByTagName("p");
+    // document.body.insertBefore(paragrapgs[2], paragrapgs[0]);
+
+
+    </script>
+
 </body>
 </html>
