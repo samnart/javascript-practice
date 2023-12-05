@@ -27,16 +27,91 @@
 
     <!-- <p data-classified="secret"> The launch code is 00000000.</p> -->
     <!-- <p data-classified="unclassified">I have two feet.</p> -->
-
+<!-- 
     <p style="border: 3px solid red;">
         I'm boxed in
     </p>
 
-    <script >
+    <p><span id="one"></span></p>
+    <p><span id="two"></span></p>
 
-        let para = document.body.getElementsByTagName("p")[0];
-        console.log("clientHeight:", para.clientHeight);
-        console.log("offsetHiehgt:", para.offsetHeight);
+
+    <p><a href=".">Normal link</a></p>
+    <p><a href="." style="color: green;">Green link</a></p>
+
+    <p>This text is displayed <strong>inline</strong>, <strong style="display: block;">as a block</strong>, and <strong style="display: none;">not at all</strong>.</p>
+
+    <p id="para" style="color: purple;">
+        Nice text
+    </p> -->
+
+    <!-- <style>
+        strong {
+            font-style: italic;
+            color: gray;
+        }
+
+        .subtle {
+            color: gray;
+            font-size: 80%;
+        }
+
+        #header {
+            background: blue;
+            color: white;
+        }
+        /* p elements with id main and with classes a ang b */
+        p#main.a.b {
+            margin-bottom: 20px;
+        }
+    </style> -->
+
+    <!-- <p>And if you go chasing <span class="animal">rabbits</span></p>
+    <p>And you know you're going to fall</p>
+    <p>Tell 'em a <span class="character">hookah smoking <spand class="animal">caterpillar</spand></span></p>
+    <p>Has given you the call</p> -->
+
+    
+
+    <script >
+        // function count(selector) {
+        //     return document.querySelectorAll(selector).length;
+        // }
+        // console.log(count("p"));
+        // console.log(count(".animal"));
+        // console.log(count("p .animal"));
+        // console.log(count("p > .animal"));
+
+        // let para = document.getElementById("para");
+        // console.log(para.style.color);
+        // para.style.color = "magenta";
+
+
+        // function time(name, action) {
+        //     let start = Date.now;
+        //     action();
+        //     console.log(name, "took", Date.now - start, "ms");
+        // }
+
+        // time("naive", () => {
+        //     let target = document.getElementById("one");
+        //     while (target.offsetWidth < 2000) {
+        //         target.appendChild(document.createTextNode("X"));
+        //     }
+        // });
+
+        // time("clever", function() {
+        //     let target = document.getElementById("two");
+        //     target.appendChild(document.createTextNode("XXXXX"));
+        //     let total = Math.ceil(2000 / (target.offsetWidth / 5));
+        //     target.firstChild.nodeValue = "X".repeat(total);
+        // });
+
+
+
+        // let para = document.body.getElementsByTagName("p")[0];
+        // console.log("clientHeight:", para.clientHeight);
+        // console.log("offsetHiehgt:", para.offsetHeight);
 
 
         // let paras = document.body.getElementsByTagName("p");
