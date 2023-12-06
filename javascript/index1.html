@@ -71,24 +71,93 @@
     <p>Tell 'em a <span class="character">hookah smoking <spand class="animal">caterpillar</spand></span></p>
     <p>Has given you the call</p> -->
 
-     <p style="text-align: center;"> 
+     <!-- <p style="text-align: center;"> 
         <img src="img/1.jpg" alt="zoro" style="position: relative;">
-    </p>
+    </p> -->
+
+    <!-- <p>Click this document to activate the handler.</p> -->
+
+    <!-- <button>Click me</button> -->
+    <!-- <p>No handler here.</p> -->
+
+    <!-- <button>Act-once button</button> -->
+
+    <!-- <button>Click me any way you want</button> -->
+
+    <!-- <p>A paragraph with a <button>button</button>.</p> -->
+
+    <!-- <button>A</button>
+    <button>B</button>
+    <button>C</button> -->
+
+    <!-- <a href="https://developer.mozilla.org/en-US/">MDN</a> -->
     
 
     <script >
 
-        let zoro = document.querySelector("img")
-        let angle = Math.PI / 2;
-        function animate(time, lastTime) {
-            if (lastTime != null) {
-                angle += (time - lastTime) * 0.001;
-            }
-            zoro.style.top = (Math.sin(angle) * 20) + "px";
-            zoro.style.left = (Math.cos(angle) * 200) + "px";
-            requestAnimationFrame(newTime => animate(newTime, time));
-        }
-        requestAnimationFrame(animate)
+
+
+        // let link = document.querySelector("a");
+        // link.addEventListener("click", event => {
+        //     console.log("Nope.");
+        //     event.preventDefault();
+        // });
+
+        // document.body.addEventListener("click", event => {
+        //     if (event.target.nodeName == "BUTTON") {
+        //         console.log("Clicked", event.target.textContent);
+        //     }
+        // });
+
+        // let para = document.querySelector("p");
+        // let button = document.querySelector("button");
+        // para.addEventListener("mousedown", () => {
+        //     console.log("Handler for paragraph.");
+        // });
+        // button.addEventListener("mousedown", event => {
+        //     console.log("Handler for button");
+        //     if (event.button == 2) event.stopPropagation();
+        // });
+
+        // let button = document.querySelector("button");
+        // button.addEventListener("mousedown", event => {
+        //     if (event.button == 0) {
+        //         console.log("Left button");
+        //     } else if (event.button == 1) {
+        //         console.log("Middle button");
+        //     } else if (event.button == 2) {
+        //         console.log("Right button");
+        //     }
+        // });
+
+        // let button = document.querySelector("button");
+        // function once() {
+        //     console.log("Done.");
+        //     button.removeEventListener("click", once);
+        // }
+        // button.addEventListener("click", once);
+
+        // let button = document.querySelector("button");
+        // button.addEventListener("click", () => {
+        //     console.log("Button clicked.");
+        // });
+
+        // window.addEventListener("click", () => {
+        //     console.log("You knocked?");
+        // });
+
+
+        // let zoro = document.querySelector("img")
+        // let angle = Math.PI / 2;
+        // function animate(time, lastTime) {
+        //     if (lastTime != null) {
+        //         angle += (time - lastTime) * 0.001;
+        //     }
+        //     zoro.style.top = (Math.sin(angle) * 20) + "px";
+        //     zoro.style.left = (Math.cos(angle) * 200) + "px";
+        //     requestAnimationFrame(newTime => animate(newTime, time));
+        // }
+        // requestAnimationFrame(animate)
 
 
 
