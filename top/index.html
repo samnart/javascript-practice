@@ -10,31 +10,46 @@
 
 
     <script>
+        "use strict"
 
         function add7(number) {
             return number + 7;
         }
-        console.log(add7(10));
 
+        console.log(add7(8))
 
-        function multiply(x, y) {
-            let product = x * y;
-            return product;
+        function multiply(first, second) {
+            return first * second;
         }
-        console.log(multiply(3, 4));
-
 
         function capitalize(string) {
-            let string1 = string[0].toUpperCase();
+            let string1 = string.charAt(string[0]).toUpperCase();
             return string1 + string.slice(1);
         }
-        console.log(capitalize('digit'));
 
-        
-        function lastLetter(string) {
-            return string.charAt(string.length-1);
+        console.log(capitalize("rbeitsplatz"));
+
+        function lastletter(word) {
+            let last = word.charAt(word.length-1);
+            return last;
         }
-        console.log(lastLetter("digit"));
+
+        console.log(lastletter("asdf"));
+
+        // project fizzbuzz
+
+        let answer = parseInt(prompt("What number do you want to fizzbuzz to: "));
+        for (let i = 1; i <= answer; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("fizzbuzz");
+            } else if (i % 3 === 0) {
+                console.log("fizz");
+            } else if (i % 5 === 0) {
+                console.log("buzz");
+            } else {
+                console.log(i);
+            }
+        }
 
 
 
