@@ -114,6 +114,12 @@
 
             if (player === computerSelection) {
                 console.log("It is a tie, try again");
+            } else if ((player === "rock" && computerSelection === "scissors") ||
+            (player === "scissors" && computerSelection === "paper") ||
+            (player === "paper" && computerSelection === "rock")) {
+                console.log("You win!");     
+            } else {
+                console.log("You lose!");
             }
             
                 
