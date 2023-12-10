@@ -51,9 +51,67 @@
             }
         }
 
-        const a = "Hello";
-        const b = "World";
-        console.log(c)
+        // ReferenceError
+        // const a = "Hello";
+        // const b = "World";
+        // console.log(c)
+
+        const a = 5; 
+        const b = 10;
+
+        function add() {
+            // return c;
+        }
+
+        function print() {
+            add();
+        }
+
+        print();
+
+        // SyntaxError
+        function helloWorld() {
+            // console.log "Hello World!"
+        }
+
+        // TypeError
+        const str1 = "Hello";
+        const str2 = "World";
+        const message = str1.concat(str2);
+        console.log(message);
+
+        console.log("Hello World!");
+
+
+        function getComputerChoice() {
+            let choice = Math.floor(Math.random() * 30);
+            if (choice < 10) {
+                return "Rock";
+            } else if (choice <= 20) {
+                return "Paper";
+            } else {
+                return "Scissors";
+            }
+        }
+        console.log(getComputerChoice())
+
+        function playRound(playerSelection, computerSelection) {
+            let player = playerSelection;
+            let computer = computerSelection;
+
+            // var playrock = "Rock" || "rock" || "ROCK";
+            // var playpaper = "Paper" || "paper" || "PAPER";
+            // var playscissors = "scissors" || "Scissors" || "SCISSORS";
+
+            
+                
+    
+        }
+
+        const playerSelection = " ";
+        const computerSelection = getComputerChoice();
+
+        console.log(playRound(playerSelection, computerSelection));
 
 
 
