@@ -86,32 +86,45 @@
         function getComputerChoice() {
             let choice = Math.floor(Math.random() * 30);
             if (choice < 10) {
-                return "Rock";
+                return "rock";
             } else if (choice <= 20) {
-                return "Paper";
+                return "paper";
             } else {
-                return "Scissors";
+                return "scissors";
             }
         }
         console.log(getComputerChoice())
 
         function playRound(playerSelection, computerSelection) {
-            let player = playerSelection;
-            let computer = computerSelection;
 
-            // var playrock = "Rock" || "rock" || "ROCK";
-            // var playpaper = "Paper" || "paper" || "PAPER";
-            // var playscissors = "scissors" || "Scissors" || "SCISSORS";
+            let player;
 
+            if (playerSelection.toLowerCase() === "rock") {
+                player = "rock";
+            } else if (playerSelection.toLowerCase === "paper") {
+                player = "paper";
+            } else if (playerSelection.toLowerCase === "scissors") {
+                player = "scissors";
+            } else {
+                player = "default";
+            }
+            
+            console.log(`Player chose ${player}`);
+            console.log(`computer chose ${computerSelection}`);
+
+            if (player === computerSelection) {
+                console.log("It is a tie, try again");
+            }
             
                 
     
         }
 
-        const playerSelection = " ";
+        const playerSelection = "rock";
         const computerSelection = getComputerChoice();
 
-        console.log(playRound(playerSelection, computerSelection));
+        // console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
 
 
 
