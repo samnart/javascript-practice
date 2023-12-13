@@ -8,162 +8,167 @@
 <body>
     
 
-
-    <script>
-        "use strict"
-
-        function add7(number) {
-            return number + 7;
-        }
-
-        console.log(add7(8))
-
-        function multiply(first, second) {
-            return first * second;
-        }
-
-        function capitalize(string) {
-            let string1 = string.charAt(string[0]).toUpperCase();
-            return string1 + string.slice(1);
-        }
-
-        console.log(capitalize("rbeitsplatz"));
-
-        function lastletter(word) {
-            let last = word.charAt(word.length-1);
-            return last;
-        }
-
-        console.log(lastletter("asdf"));
-
-        // project fizzbuzz
-
-        let answer = 1//parseInt(prompt("What number do you want to fizzbuzz to: "));
-        for (let i = 1; i <= answer; i++) {
-            if (i % 3 === 0 && i % 5 === 0) {
-                console.log("fizzbuzz");
-            } else if (i % 3 === 0) {
-                console.log("fizz");
-            } else if (i % 5 === 0) {
-                console.log("buzz");
-            } else {
-                console.log(i);
-            }
-        }
-
-        // ReferenceError
-        // const a = "Hello";
-        // const b = "World";
-        // console.log(c)
-
-        const a = 5; 
-        const b = 10;
-
-        function add() {
-            // return c;
-        }
-
-        function print() {
-            add();
-        }
-
-        print();
-
-        // SyntaxError
-        function helloWorld() {
-            // console.log "Hello World!"
-        }
-
-        // TypeError
-        const str1 = "Hello";
-        const str2 = "World";
-        const message = str1.concat(str2);
-        console.log(message);
-
-        console.log("Hello World!");
+    <div id="container">
+        <div class="display"></div>
+        <div class="controls"></div>
+    </div>
 
 
-        function getComputerChoice() {
-            let choice = Math.floor(Math.random() * 30);
-            if (choice < 10) {
-                return "rock";
-            } else if (choice <= 20) {
-                return "paper";
-            } else {
-                return "scissors";
-            }
-        }
-        console.log(getComputerChoice())
+    <script src="script.js">
+        // "use strict"
 
-        function playRound(playerSelection, computerSelection) {
+        // function add7(number) {
+        //     return number + 7;
+        // }
 
-            let player;
+        // console.log(add7(8))
 
-            if (playerSelection.toLowerCase() === "rock") {
-                player = "rock";
-            } else if (playerSelection.toLowerCase === "paper") {
-                player = "paper";
-            } else if (playerSelection.toLowerCase === "scissors") {
-                player = "scissors";
-            } else {
-                player = "default";
-            }
+        // function multiply(first, second) {
+        //     return first * second;
+        // }
+
+        // function capitalize(string) {
+        //     let string1 = string.charAt(string[0]).toUpperCase();
+        //     return string1 + string.slice(1);
+        // }
+
+        // console.log(capitalize("rbeitsplatz"));
+
+        // function lastletter(word) {
+        //     let last = word.charAt(word.length-1);
+        //     return last;
+        // }
+
+        // console.log(lastletter("asdf"));
+
+        // // project fizzbuzz
+
+        // let answer = 1//parseInt(prompt("What number do you want to fizzbuzz to: "));
+        // for (let i = 1; i <= answer; i++) {
+        //     if (i % 3 === 0 && i % 5 === 0) {
+        //         console.log("fizzbuzz");
+        //     } else if (i % 3 === 0) {
+        //         console.log("fizz");
+        //     } else if (i % 5 === 0) {
+        //         console.log("buzz");
+        //     } else {
+        //         console.log(i);
+        //     }
+        // }
+
+        // // ReferenceError
+        // // const a = "Hello";
+        // // const b = "World";
+        // // console.log(c)
+
+        // const a = 5; 
+        // const b = 10;
+
+        // function add() {
+        //     // return c;
+        // }
+
+        // function print() {
+        //     add();
+        // }
+
+        // print();
+
+        // // SyntaxError
+        // function helloWorld() {
+        //     // console.log "Hello World!"
+        // }
+
+        // // TypeError
+        // const str1 = "Hello";
+        // const str2 = "World";
+        // const message = str1.concat(str2);
+        // console.log(message);
+
+        // console.log("Hello World!");
+
+
+        // function getComputerChoice() {
+        //     let choice = Math.floor(Math.random() * 30);
+        //     if (choice < 10) {
+        //         return "rock";
+        //     } else if (choice <= 20) {
+        //         return "paper";
+        //     } else {
+        //         return "scissors";
+        //     }
+        // }
+        // console.log(getComputerChoice())
+
+        // function playRound(playerSelection, computerSelection) {
+
+        //     let player;
+
+        //     if (playerSelection.toLowerCase() === "rock") {
+        //         player = "rock";
+        //     } else if (playerSelection.toLowerCase === "paper") {
+        //         player = "paper";
+        //     } else if (playerSelection.toLowerCase === "scissors") {
+        //         player = "scissors";
+        //     } else {
+        //         player = "default";
+        //     }
             
-            // console.log(`Player chose ${player}`);
-            // console.log(`computer chose ${computerSelection}`);
+        //     // console.log(`Player chose ${player}`);
+        //     // console.log(`computer chose ${computerSelection}`);
 
-            if (player === computerSelection) {
-                console.log("It is a tie, try again");
-                return "It's a tie";
-            } else if ((player === "rock" && computerSelection === "scissors") ||
-            (player === "scissors" && computerSelection === "paper") ||
-            (player === "paper" && computerSelection === "rock")) {
-                console.log("You win!");     
-                return "You win!";
-            } else {
-                console.log("You lose!");
-                return "You lose!";
-            }
+        //     if (player === computerSelection) {
+        //         console.log("It is a tie, try again");
+        //         return "It's a tie";
+        //     } else if ((player === "rock" && computerSelection === "scissors") ||
+        //     (player === "scissors" && computerSelection === "paper") ||
+        //     (player === "paper" && computerSelection === "rock")) {
+        //         console.log("You win!");     
+        //         return "You win!";
+        //     } else {
+        //         console.log("You lose!");
+        //         return "You lose!";
+        //     }
             
                       
     
-        }
+        // }
 
-        // const playerSelection = "rock";
-        // const computerSelection = getComputerChoice();
+        // // const playerSelection = "rock";
+        // // const computerSelection = getComputerChoice();
 
-        // console.log(playRound(playerSelection, computerSelection));
-        // playRound(playerSelection, computerSelection);
-        // console.log(playRound(playerSelection, computerSelection));
+        // // console.log(playRound(playerSelection, computerSelection));
+        // // playRound(playerSelection, computerSelection);
+        // // console.log(playRound(playerSelection, computerSelection));
 
-        function game() {
-            let playerScore = 0;
-            let computerScore = 0;
+        // function game() {
+        //     let playerScore = 0;
+        //     let computerScore = 0;
 
-            for(let counter = 0; counter < 5; counter++) {
-                const playerSelection = prompt("Rock Paper Scissors");
-                const computerSelection = getComputerChoice();
+        //     for(let counter = 0; counter < 5; counter++) {
+        //         const playerSelection = prompt("Rock Paper Scissors");
+        //         const computerSelection = getComputerChoice();
 
-                const result = playRound(playerSelection, computerSelection);
+        //         const result = playRound(playerSelection, computerSelection);
 
-                // let result;
-                if(result === "You win!") {
-                    playerScore++;
-                } else if(result === "You lose!") {
-                    computerScore++;
-                }
-            }
+        //         // let result;
+        //         if(result === "You win!") {
+        //             playerScore++;
+        //         } else if(result === "You lose!") {
+        //             computerScore++;
+        //         }
+        //     }
 
-            if (playerScore > computerScore) {
-                console.log("Game Over! You Win");
-            } else if (computerScore > playerScore) {
-                console.log("Game Over! You Lose!")
-            } else {
-                console.log("It is a tie");
-            }
-        }
+        //     if (playerScore > computerScore) {
+        //         console.log("Game Over! You Win");
+        //     } else if (computerScore > playerScore) {
+        //         console.log("Game Over! You Lose!")
+        //     } else {
+        //         console.log("It is a tie");
+        //     }
+        // }
 
-        game();
+        // game();
 
 
 
