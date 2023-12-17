@@ -62,6 +62,9 @@ const Book = function(title, author, pages, read) {
     this.read = read;
 }
 
+Object.getPrototypeOf(player) === Player.prototype;
+// Object.getPrototypeOf(player) 
+
 Book.prototype.info = function() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
 }
