@@ -74,17 +74,91 @@
 // console.log(theHobbit.info());
 
 
-const Book = function(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+// const Book = function(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+// Book.prototype.info = function() {
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
+// }
+
+// const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read');
+
+// console.log(theHobbit.info());
+
+// function Person(name) {
+//     this.name = name;
+// }
+
+// Person.prototype.sayName = function() {
+//     console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// const johnDoe = new Person("John Doe");
+// johnDoe.sayName();
+
+
+
+// function Player(name, marker) {
+//     this.name = name;
+//     this.marker = marker;
+// }
+
+// Player.prototype.getMarker = function() {
+//     console.log(`My marker is '${this.marker}'`);
+// };
+// const player1 = new Player('Alex', 'x');
+// player1.getMarker();
+
+
+// Object.getPrototypeOf(Player.prototype) should return the value of "Person.prototype" instead of "Object.prototype"
+
+// Object.getPrototypeOf(Player.prototype)
+// console.log(Object.getPrototypeOf(Player.prototype));
+
+// Now make `Player` objects inherit from `Person`
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+// Object.getPrototypeOf(Player.prototype);
+
+// const player1 = new Player('Steve', 'X');
+// const player2 = new Player('also Steve', 'O');
+
+// player1.sayName();
+// player2.sayName();
+
+// player1.getMarker();
+// player2.getMarker();
+
+function Person(name) {
+    this.name = name;
 }
 
-Book.prototype.info = function() {
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
+Person.prototype.sayName = function() {
+    console.log(`Hello, my name is ${this.name}!`);
+};
+
+function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
 }
 
-const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read');
+// Don't do this!
+Player.prototype = Person.prototype;
 
-console.log(theHobbit.info());
+function Enemy(name) {
+    this.name = name;
+    this.marker = '^';
+}
+
+// Not again < Use Object.setPrototypeOf(Enemy.prototype, Person.prototype)
+Enemy.prototype = Person.prototype;
+
+Enemy.prototype.sayName = function() {
+    console.log('HAHAHAHAHAHHAHA');
+};
+
+const carl = new Player('carl', 'X');
+carl.sayName(); // this logs HAHAHAHAHAHAHAH 
