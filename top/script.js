@@ -47,13 +47,32 @@
 
 // myObject[variable];
 
-function Player(name, marker) {
-    this.name = name;
-    this.marker = marker;
-}
+// function Player(name, marker) {
+//     this.name = name;
+//     this.marker = marker;
+// }
 
-const player = new Player('Sam', 'X');
-console.log(player.name);
+// const player = new Player('Sam', 'X');
+// console.log(player.name);
+
+// const Book = function(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+// Object.getPrototypeOf(player) === Player.prototype;
+// // Object.getPrototypeOf(player) 
+
+// Book.prototype.info = function() {
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
+// }
+
+// const theHobbit = new Book('The Hobbit', 'J.R.R. Tokien', 295, 'not read');
+
+// console.log(theHobbit.info());
+
 
 const Book = function(title, author, pages, read) {
     this.title = title;
@@ -62,13 +81,10 @@ const Book = function(title, author, pages, read) {
     this.read = read;
 }
 
-Object.getPrototypeOf(player) === Player.prototype;
-// Object.getPrototypeOf(player) 
-
 Book.prototype.info = function() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
 }
 
-const theHobbit = new Book('The Hobbit', 'J.R.R. Tokien', 295, 'not read');
+const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read');
 
 console.log(theHobbit.info());
