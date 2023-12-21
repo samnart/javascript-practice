@@ -132,33 +132,112 @@
 // player1.getMarker();
 // player2.getMarker();
 
-function Person(name) {
-    this.name = name;
-}
+// function Person(name) {
+//     this.name = name;
+// }
 
-Person.prototype.sayName = function() {
-    console.log(`Hello, my name is ${this.name}!`);
-};
+// Person.prototype.sayName = function() {
+//     console.log(`Hello, my name is ${this.name}!`);
+// };
 
-function Player(name, marker) {
-    this.name = name;
-    this.marker = marker;
-}
+// function Player(name, marker) {
+//     this.name = name;
+//     this.marker = marker;
+// }
 
-// Don't do this!
-Player.prototype = Person.prototype;
+// // Don't do this!
+// Player.prototype = Person.prototype;
 
-function Enemy(name) {
-    this.name = name;
-    this.marker = '^';
-}
+// function Enemy(name) {
+//     this.name = name;
+//     this.marker = '^';
+// }
 
-// Not again < Use Object.setPrototypeOf(Enemy.prototype, Person.prototype)
-Enemy.prototype = Person.prototype;
+// // Not again < Use Object.setPrototypeOf(Enemy.prototype, Person.prototype)
+// Enemy.prototype = Person.prototype;
 
-Enemy.prototype.sayName = function() {
-    console.log('HAHAHAHAHAHHAHA');
-};
+// Enemy.prototype.sayName = function() {
+//     console.log('HAHAHAHAHAHHAHA');
+// };
 
-const carl = new Player('carl', 'X');
-carl.sayName(); // this logs HAHAHAHAHAHAHAH 
+// const carl = new Player('carl', 'X');
+// carl.sayName(); // this logs HAHAHAHAHAHAHAH 
+
+// function hello(name) {
+    // return 'Hello ' + name + '!';
+// }
+
+// const message = hello('world');
+// console.log(message);
+
+// const message = (function(name) {
+//     return 'Hello ' + name + '!';
+// })('World');
+
+// console.log(message);
+
+// function sum(a, b) {
+//     console.log(this === window);
+//     this.myNumber = 20;
+//     return a + b;
+// }
+
+// sum(15, 16);
+// window.myNumber;
+
+// console.log(this === window);
+
+// function execute() {
+//     'use strict';
+
+//     function concat(str1, str2) {
+//         console.log(this === undefined);
+//         return str1 + str2;
+//     }
+//     concat('Hello', ' World!');
+// }
+
+// execute();
+// // console.log(execute());
+
+// function nonStrictSum(a, b) {
+//     // non-strict mode
+//     console.log(this === window);
+//     return a + b;
+// }
+
+// function strictSum(a, b) {
+//     'use strict';
+//     console.log(this === undefined);
+//     return a + b;
+// }
+
+// nonStrictSum(5, 6);
+
+// strictSum(8, 12);
+
+// 'use strict'
+// const numbers = {
+//     numberA: 5,
+//     numberB: 10,
+
+//     sum: function() {
+//         'use strict'
+//         console.log(this === numbers);
+
+//         // function calculate() {
+//         //     'use strict'
+//         //     console.log(this === numbers);
+//         //     return this.numberA + this.numberB;
+//         // }
+
+//         const calculate = () => {
+//             console.log(this === numbers);
+//             return this.numberA + this.numberB;
+//         }
+//         return calculate();
+//     }
+// };
+
+// console.log(numbers.sum())
+
