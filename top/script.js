@@ -251,17 +251,57 @@
 // const message = myObject.helloMethod();
 // console.log(message);
 
-const words = ['Hello', 'World'];
-words.join(', '); //method invocation
+// const words = ['Hello', 'World'];
+// words.join(', '); //method invocation
 
-const obj = {
-    myMethod() {
-        return new Date().toString();
+// const obj = {
+//     myMethod() {
+//         return new Date().toString();
+//     }
+// };
+// obj.myMethod(); // method invocation
+
+// const func = obj.myMethod;
+// func(); // function invocation
+// parseFloat('16.6'); // function invocation
+// isNaN(0); // function invocation
+
+// this in a method invocation
+
+// const calc = {
+//     num: 0,
+//     increment() {
+//         console.log(this === calc);
+//         this.num += 1;
+//         return this.num;
+//     }
+// }
+
+// console.log(calc.increment());
+
+// const myDog = Object.create({
+//     sayName() {
+//         console.log(this === myDog);
+//         return this.name;
+//     }
+// })
+
+// myDog.name = 'Milo';
+// console.log(myDog.sayName());
+
+class Planet {
+    constructor(name) {
+        this.name = name;
     }
-};
-obj.myMethod(); // method invocation
 
-const func = obj.myMethod;
-func(); // function invocation
-parseFloat('16.6'); // function invocation
-isNaN(0); // function invocation
+    getName() {
+        console.log(this === earth);
+        return this.name;
+    }
+}
+
+const earth = new Planet('Earth');
+
+console.log(earth.getName())
+
+// Pitfall: Separating method from its object
