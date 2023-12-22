@@ -289,19 +289,49 @@
 // myDog.name = 'Milo';
 // console.log(myDog.sayName());
 
-class Planet {
-    constructor(name) {
-        this.name = name;
-    }
+// class Planet {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    getName() {
-        console.log(this === earth);
-        return this.name;
+//     getName() {
+//         console.log(this === earth);
+//         return this.name;
+//     }
+// }
+
+// const earth = new Planet('Earth');
+
+// console.log(earth.getName())
+
+// Pitfall: Separating method from its object
+
+
+// console.log(23 + 96);
+
+// console.log(233 + 23 + 2398 + 9878 + 987 + 97);
+
+// console.log((4 + 6 + 9) / 77);
+
+// let a = 10;
+// console.log(a)
+// console.log(a * 9);
+// let b = 7 * a;
+// console.log(b);
+
+// let MAX = 57;
+// let actual = MAX - 13;
+// let percentage = actual / MAX;
+// console.log(percentage);
+
+var number = Number(prompt("Enter a number"));
+
+function numberChecker() {
+    if(number >= 10) {
+        return true;
+    } else {
+        return false;
     }
 }
 
-const earth = new Planet('Earth');
-
-console.log(earth.getName())
-
-// Pitfall: Separating method from its object
+console.log(numberChecker());
