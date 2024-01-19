@@ -164,7 +164,7 @@
 // carl.sayName(); // this logs HAHAHAHAHAHAHAH 
 
 // function hello(name) {
-    // return 'Hello ' + name + '!';
+// return 'Hello ' + name + '!';
 // }
 
 // const message = hello('world');
@@ -324,14 +324,14 @@
 // let percentage = actual / MAX;
 // console.log(percentage);
 
-var number = Number(prompt("Enter a number"));
+var number = Number(prompt('Enter a number'));
 
 function numberChecker() {
-    if(number >= 10) {
-        return true;
-    } else {
-        return false;
-    }
+	if(number >= 10) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 console.log(numberChecker());
