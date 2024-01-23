@@ -1,0 +1,49 @@
+:root {
+    --primary: #d5f06a;
+    --header: #1eadd1;
+    --black: #050202;
+    --grey: #605f5f;
+    --white: #ffffff;
+}
+
+html {
+    margin: 0 auto;
+    width: 60%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+main .addBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .addBook > * {
+    margin: 0.75rem;
+}
+
+main .addBook label {
+    font-weight: bold;
+    /* width: 1rem; */
+}
+
+main .addBook input {
+    width: 20rem;
+    margin-right: 10px;
+    margin-left: 0;
+    height: 1.5rem;
+    font-weight: bold;
+}
+
+main .addBook button {
+    padding: 0.3rem 0.8rem;
+    height: 5rem;
+    width: 20%;
+}
