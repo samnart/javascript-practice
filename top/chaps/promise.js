@@ -106,7 +106,7 @@
 //     return new Promise( (resolve, reject) => {
 //         fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast')
 //             .then(response => response.json())
-//             .then(data => reject(data.properties.periods[13].shortForecast));
+//             .then(data => resolve(data.properties.periods[13].shortForecast));
 //     } );
 // }
 
@@ -124,6 +124,46 @@
 
 const myDiv = document.querySelector('div#myDiv');
 
-myDiv.addEventListener("click", function() {
-    console.log("You clicked me!")
+myDiv.addEventListener("click", function(event) {
+    console.log("You clicked me!", event)
 })
+
+const array = [1, 2, 3, 4];
+
+array.forEach(callback);
+
+function callback(arg) {
+    console.log(arg * 2);
+}
+
+
+
+
+
+$.ajax({
+    type: "GET",
+    url: "data/dogs.json",
+    success: success, cats
+})
+
+function cats(data) {
+    $.ajax({
+        type: "GET",
+        url: "data/cats.json",
+        success: success, fish
+        
+    })
+}
+
+function fish(data) {
+    console.log(data)
+    $.ajax({
+        type: "GET",
+        url: "data/fish.json",
+        success: success
+    })
+}
+
+function success(data) {
+    console.log(data);
+}
