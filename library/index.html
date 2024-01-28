@@ -3,40 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dist/styles.css">
     <title>My Library</title>
 </head>
 <body>
-
-    <header>
-        <h1>My Library</h1>
-        <div>
-            <input type="submit" value="sign up">
-            <input type="submit" value="log in">
-        </div>
-    </header>
-
-    <main>
-
-        <div class="addBook">
-
-            <label class="author"><input type="text" id="author" placeholder="e.g. Walter Isaacson">Author</label>
-
-            <label class="title"><input type="text" id="title" placeholder="e.g. Biography of Elon Musk"> Title</label>
-            
-            <label class="pages"><input type="number" id="pages" placeholder="375"> Pages</label>
-
-            <label class="read"><input type="checkbox" id="read">Read</label>
-
-            <button onclick="addBook()">Add Book to library</button>
-        </div>
-
-        <div>
-            <div id="books"></div>
-        </div>
-
-    </main>
-
-    <script src="main.js"></script>
+    <div id="app">
+        <h1>hello, Webpack and Babel!</h1>
+        <button id="clickMe">click me</button>
+        <p id="output"></p>
+    </div>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>
