@@ -22,4 +22,11 @@ module.exports = {
             },
         ],
     },
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 8080,
+        hot: true,
+        open: true,
+    },
 };
