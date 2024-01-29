@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#id h1 {
+    font-weight: 500;
+    font-size: x-large;
+}
+
+button {
+    height: 5em;
+    width: 8em;
+
+}
