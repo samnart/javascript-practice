@@ -38,7 +38,7 @@ async function getWeatherData() {
 
 
 
-    } catch {
+    } catch(error) {
 
         document.querySelector(".icon").innerHTML = "";
         document.querySelector(".temperature").textContent = "";
