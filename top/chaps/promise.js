@@ -188,14 +188,39 @@
 //     console.log( sum );
 // } );
 
-function add(xPromise, yPromise) {
-    return Promise.all( [xPromise], [yPromise] )
-    .then ( function(values) {
-        return values[0] + values[1];
-    } );
-}
+// function add(xPromise, yPromise) {
+//     return Promise.all( [xPromise], [yPromise] )
+//     .then ( function(values) {
+//         return values[0] + values[1];
+//     } );
+// }
 
-add( fetchX(), fetchY() )
-.then( function(sum) {
-    console.log("The sum is " + sum);
-} );
+// add( fetchX(), fetchY() )
+// .then( function(sum) {
+//     console.log("The sum is " + sum);
+// } );
+
+const server = {
+    people: [
+        {
+            name: "Odin",
+            age: 20,
+        },
+        {
+            name: "Thor",
+            age: 35,
+        },
+        {
+            name: "Freyja",
+            age: 29,
+        },
+    ],
+
+    getPeople() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(this.people);
+            }, 2000);
+        });
+    },
+};
