@@ -73,3 +73,36 @@
 
 // const aaa = all([1, 2, 9], 7);
 // console.log(aaa)
+
+
+function printChildren(t) {}
+
+function printChildRecursive(t) {
+    if (t.children.length === 0) {
+        return
+    }
+    t.children.forEach( child => {
+        console.log(child.name)
+        printChildRecursive(child)
+    })
+}
+
+
+const tree = {
+    name: 'John',
+    children: [
+        {
+            name: 'Jim',
+            children: []
+        },
+        {
+            name: 'Zoe',
+            children: [
+                { name: 'Kyle', children: [] },
+                { name: 'Sophia', children: [] }
+            ]
+        }
+    ]
+}
+
+printChildRecursive(tree);
