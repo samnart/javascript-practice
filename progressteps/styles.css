@@ -42,9 +42,8 @@ body {
     left: 0;
     transform: translateY(50%);
     height: 4px;
-    width: 0%;
+    width: 100%;
     z-index: -1;
-    transition: 0.4s ease;
 }
 
 .progress {
@@ -54,8 +53,9 @@ body {
     left: 0;
     transform: translateY(50%);
     height: 4px;
-    width: 100%;
+    width: 0;
     z-index: -1;
+    transition: 0.4s ease;
 }
 
 .circle {
