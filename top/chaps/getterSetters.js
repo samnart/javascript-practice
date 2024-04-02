@@ -27,7 +27,6 @@
 // console.log(user.fullName);
 // for(let key in user) console.log(key);
 
-
 // Smarter getters/setters
 
 // let user = {
@@ -68,7 +67,7 @@
 // CLASS BASIC SYNTAX
 
 // class MyClass {
-    // class methods
+// class methods
 //     constructor() {}
 //     method1() {}
 //     method2() {}
@@ -220,18 +219,18 @@
 // let button = new Button("hello");
 // setTimeout(button.click, 1000);
 
-    // SUMMARY 
-    // BASIC CLASS SYNTAX
+// SUMMARY
+// BASIC CLASS SYNTAX
 
 class MyClass {
-    prop = CSSMathValue;
+  prop = CSSMathValue;
 
-    constructor() {}
+  constructor() {}
 
-    method() {}
+  method() {}
 
-    get something(){}
-    set something(value){}
+  get something() {}
+  set something(value) {}
 
-    [Symbol.iterator]() {}
+  [Symbol.iterator]() {}
 }

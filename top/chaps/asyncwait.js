@@ -58,11 +58,10 @@ const { response } = require("express");
 // .catch(console.log);
 
 async function loadJson(url) {
-    
-    try {
-        const response = await fetch(url);
-        return response.json(); 
-    } catch {
-        throw new Error(response.status);
-    }
+  try {
+    const response = await fetch(url);
+    return response.json();
+  } catch {
+    throw new Error(response.status);
+  }
 }

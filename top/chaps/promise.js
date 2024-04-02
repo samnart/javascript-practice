@@ -11,14 +11,11 @@
 // // //     }, 500);
 // // // });
 
-
-
 // // // // A
 // // // ajax( "..", function(..){
 // // //     // C
 // // // });
 // // // // B
-
 
 // // // analytics.trackPurchase( purchaseData, function() {
 // // //     chargeCreditCard();
@@ -84,7 +81,6 @@
 // //         console.log(err);
 // //     });
 
-
 // // function getWeather() {
 // //     return new Promise(function(resolve, reject) {
 // //         reject('Sunny');
@@ -136,10 +132,6 @@
 //     console.log(arg * 2);
 // }
 
-
-
-
-
 // $.ajax({
 //     type: "GET",
 //     url: "data/dogs.json",
@@ -151,7 +143,7 @@
 //         type: "GET",
 //         url: "data/cats.json",
 //         success: success, fish
-        
+
 //     })
 // }
 
@@ -201,26 +193,26 @@
 // } );
 
 const server = {
-    people: [
-        {
-            name: "Odin",
-            age: 20,
-        },
-        {
-            name: "Thor",
-            age: 35,
-        },
-        {
-            name: "Freyja",
-            age: 29,
-        },
-    ],
-
-    getPeople() {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(this.people);
-            }, 2000);
-        });
+  people: [
+    {
+      name: "Odin",
+      age: 20,
     },
+    {
+      name: "Thor",
+      age: 35,
+    },
+    {
+      name: "Freyja",
+      age: 29,
+    },
+  ],
+
+  getPeople() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.people);
+      }, 2000);
+    });
+  },
 };

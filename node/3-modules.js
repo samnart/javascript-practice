@@ -4,16 +4,10 @@
 
 // const utils = require('./5-utils')
 
-
-const names = require('./4-names')
-const sayHi = require('./5-utils')
-const data = require('./6-alt')
-require('./7-mind-grenade')
-
-
-
-
-
+const names = require("./4-names");
+const sayHi = require("./5-utils");
+const data = require("./6-alt");
+require("./7-mind-grenade");
 
 // console.log(names);
 // sayHi('Samuel')
@@ -21,4 +15,3 @@ require('./7-mind-grenade')
 // sayHi(names.peter)
 
 // console.log();
-

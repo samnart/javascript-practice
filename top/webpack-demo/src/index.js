@@ -1,18 +1,18 @@
-import _ from 'lodash';
-import myName from './myName';
-import './style.css';
+import _ from "lodash";
+import myName from "./myName";
+import "./style.css";
 
 function component() {
-    const element = document.createElement('div');
+  const element = document.createElement("div");
 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    
-    element.textContent = myName('Samuel');
+  // Lodash, now imported by this script
+  element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-    element.classList.add('hello');
+  element.textContent = myName("Samuel");
 
-    return element
+  element.classList.add("hello");
+
+  return element;
 }
 
 document.body.appendChild(component());

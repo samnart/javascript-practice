@@ -1,117 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Library</h1>
-            <nav><button>Login</button></nav>
-        </div>
+      <div class="container">
+        <h1>Library</h1>
+        <nav><button>Login</button></nav>
+      </div>
     </header>
     <main>
-        
-        <form id="addBookForm">
-            <label for="title">Title:</label>
-            <input type="text" id="title" required>
+      <form id="addBookForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" required />
 
-            <label for="author">Author:</label>
-            <input type="text" id="author" required>
+        <label for="author">Author:</label>
+        <input type="text" id="author" required />
 
-            <label for="pages">Number of Pages:</label>
-            <input type="number" id="pages" required>
+        <label for="pages">Number of Pages:</label>
+        <input type="number" id="pages" required />
 
-            <label for="read">Read:</label>
-            <input type="checkbox" id="read">
+        <label for="read">Read:</label>
+        <input type="checkbox" id="read" />
 
-            <button type="button" onclick="submitForm()">Add Book</button>
-        </form>
+        <button type="button" onclick="submitForm()">Add Book</button>
+      </form>
 
-
-
-
-
-
-        <div id="bookshelf"></div>
+      <div id="bookshelf"></div>
     </main>
-    <footer>
+    <footer></footer>
 
-    </footer>
-
-    
     <script>
+      const myLibrary = [];
 
-        const myLibrary = [];
+      function Book(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+      }
 
-        function Book(title, author, pages, read) {
-            this.title = title;
-            this.author = author;
-            this.pages = pages;
-            this.read = read;
-        }
+      function addBookToLibrary(title, author, pages, read) {
+        const newBook = new Book(title, author, pages, read);
+        myLibrary.push(newBook);
+        displayBooks();
+      }
 
-        function addBookToLibrary(title, author, pages, read) {
-            const newBook = new Book(title, author, pages, read);
-            myLibrary.push(newBook);
-            displayBooks();
-        }
+      function displayBooks() {
+        // Get the element where you want to display books
+        const bookshelf = document.getElementById("bookshelf");
 
-        function displayBooks() {
-            // Get the element where you want to display books
-            const bookshelf = document.getElementById("bookshelf");
+        // clear the existing content
+        bookshelf.innerHTML = "";
 
-            // clear the existing content
-            bookshelf.innerHTML = "";
+        // loop through the library array and display each book
+        myLibrary.forEach((book, index) => {
+          const bookCard = document.createElement("div");
+          bookCard.classList.add("book-card");
 
-            // loop through the library array and display each book
-            myLibrary.forEach((book, index) => {
-                const bookCard = document.createElement("div");
-                bookCard.classList.add("book-card");
-
-                // display book details in the card 
-                bookCard.innerHTML = `
+          // display book details in the card
+          bookCard.innerHTML = `
                 <p>${book.title} by ${book.author}</p>
                 <p>${book.pages} pages</p>
-                <p>${book.read ? 'Read' : 'Not Read'}</p>
+                <p>${book.read ? "Read" : "Not Read"}</p>
                 <button onclick="removeBook(${index})">Remove</button>
                 <button onclick="toggleReadStatus(${index})">Toggle Read Status</button>`;
 
-                bookshelf.appendChild(bookCard);
-            })
+          bookshelf.appendChild(bookCard);
+        });
+      }
+
+      function submitForm() {
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const pages = document.getElementById("pages").value;
+        const read = document.getElementById("read").checked;
+
+        if (!title || !author || !pages) {
+          // alert("Please fill out all required fields");
+          return;
         }
 
-        function submitForm() {
-            const title = document.getElementById("title").value;
-            const author = document.getElementById("author").value;
-            const pages = document.getElementById("pages").value;
-            const read = document.getElementById("read").checked;
+        addBookToLibrary(title, author, pages, read);
 
-            if (!title || !author || !pages) {
-                // alert("Please fill out all required fields");
-                return;
-            }
+        document.getElementById("title").value = "";
+        document.getElementById("author").value = "";
+        document.getElementById("pages").value = "";
+        document.getElementById("read").value = false;
+      }
 
-            addBookToLibrary(title, author, pages, read);
+      function removeBook(index) {
+        myLibrary.splice(index, 1);
+        displayBooks();
+      }
 
-            document.getElementById("title").value = "";
-            document.getElementById("author").value = "";
-            document.getElementById("pages").value = "";
-            document.getElementById("read").value = false;
-        }
-
-        function removeBook(index) {
-            myLibrary.splice(index, 1);
-            displayBooks();
-        }
-
-        function toggleReadStatus(index) {
-            myLibrary[index].read = !myLibrary[index].read;
-            displayBooks();
-        }
-
+      function toggleReadStatus(index) {
+        myLibrary[index].read = !myLibrary[index].read;
+        displayBooks();
+      }
     </script>
-</body>
+  </body>
 </html>

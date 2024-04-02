@@ -12,10 +12,10 @@
 // oddNumbersLessThanTen()
 
 function findValue(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        let item = arr[i];
-        if (item == 1) {
-            return item;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    let item = arr[i];
+    if (item == 1) {
+      return item;
     }
+  }
 }

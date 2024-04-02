@@ -25,7 +25,7 @@
 // div.getAttribute('id');
 // // returns value of specified attribute, in this case "theDiv"
 
-// const myObject = { 
+// const myObject = {
 //     property: 'Value',
 //     otherProperty: 77,
 //     "obnoxious property": function() {
@@ -63,7 +63,7 @@
 // }
 
 // Object.getPrototypeOf(player) === Player.prototype;
-// // Object.getPrototypeOf(player) 
+// // Object.getPrototypeOf(player)
 
 // Book.prototype.info = function() {
 //     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read} yet`;
@@ -72,7 +72,6 @@
 // const theHobbit = new Book('The Hobbit', 'J.R.R. Tokien', 295, 'not read');
 
 // console.log(theHobbit.info());
-
 
 // const Book = function(title, author, pages, read) {
 //     this.title = title;
@@ -100,8 +99,6 @@
 // const johnDoe = new Person("John Doe");
 // johnDoe.sayName();
 
-
-
 // function Player(name, marker) {
 //     this.name = name;
 //     this.marker = marker;
@@ -112,7 +109,6 @@
 // };
 // const player1 = new Player('Alex', 'x');
 // player1.getMarker();
-
 
 // Object.getPrototypeOf(Player.prototype) should return the value of "Person.prototype" instead of "Object.prototype"
 
@@ -161,7 +157,7 @@
 // };
 
 // const carl = new Player('carl', 'X');
-// carl.sayName(); // this logs HAHAHAHAHAHAHAH 
+// carl.sayName(); // this logs HAHAHAHAHAHAHAH
 
 // function hello(name) {
 // return 'Hello ' + name + '!';
@@ -306,7 +302,6 @@
 
 // Pitfall: Separating method from its object
 
-
 // console.log(23 + 96);
 
 // console.log(233 + 23 + 2398 + 9878 + 987 + 97);
@@ -324,14 +319,14 @@
 // let percentage = actual / MAX;
 // console.log(percentage);
 
-var number = Number(prompt('Enter a number'));
+var number = Number(prompt("Enter a number"));
 
 function numberChecker() {
-	if(number >= 10) {
-		return true;
-	} else {
-		return false;
-	}
+  if (number >= 10) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 console.log(numberChecker());
